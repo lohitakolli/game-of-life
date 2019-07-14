@@ -497,15 +497,6 @@
     </profiles>
     
     
-     <distributionManagement>  
-
-    <repository>
-        <name>maven-releases</name>
-        <url>http://35.245.11.10:8081/repository/maven-releases/</url>
-    </repository>
-
-  
-      </distributionManagement>  
     
     
 </project>
