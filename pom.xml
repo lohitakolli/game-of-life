@@ -163,7 +163,6 @@
                         <storyReport>${basedir}/target/easyb/easyb-report.html
                         </storyReport>
                     </configuration>
-                
                 </plugin>
 
             </plugins>
@@ -496,16 +495,20 @@
             </reporting>
         </profile>
     </profiles>
-  <distributionManagement>  
     
+    
+     <distributionManagement>  
+
     <repository>
         <name>maven-releases</name>
         <url>http://35.245.11.10:8081/repository/maven-releases/</url>
     </repository>
-    
+
     <snapshotRepository>
         <name>maven-snapshots</name>
         <url>http://35.245.11.10:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
       </distributionManagement>  
+    
+    
 </project>
