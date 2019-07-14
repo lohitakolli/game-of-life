@@ -504,10 +504,7 @@
         <url>http://35.245.11.10:8081/repository/maven-releases/</url>
     </repository>
 
-    <snapshotRepository>
-        <name>maven-snapshots</name>
-        <url>http://35.245.11.10:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
+  
       </distributionManagement>  
     
     
