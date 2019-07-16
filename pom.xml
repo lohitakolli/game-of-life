@@ -11,12 +11,7 @@
  
     
      <properties>
-         <property>
-          <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-          <serenity.version>1.0.47</serenity.version>
-          <serenity.maven.version>1.0.47</serenity.maven.version>
-          <webdriver.driver>firefox</webdriver.driver>
-    </property>
+         
          <property>
         <build.number>SNAPSHOT</build.number>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
