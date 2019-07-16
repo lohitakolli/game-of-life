@@ -7,7 +7,22 @@
     <packaging>pom</packaging>
     <name>gameoflife</name>
     <url>https://github.com/wakaleo/game-of-life</url>
-    <properties>
+    
+    <modelVersion>4.0.0</modelVersion>
+     <groupId>net.serenity_bdd.samples.junit</groupId>
+     <artifactId>junit-quick-start</artifactId>
+     <version>0.0.1-SNAPSHOT</version>
+     <packaging>jar</packaging>
+     <name>Serenity JUnit Quick Start Project</name>
+    
+     <properties>
+         <property>
+          <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+          <serenity.version>1.0.47</serenity.version>
+          <serenity.maven.version>1.0.47</serenity.maven.version>
+          <webdriver.driver>firefox</webdriver.driver>
+    </property>
+         <property>
         <build.number>SNAPSHOT</build.number>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <easyb.version>1.4</easyb.version>
@@ -19,6 +34,8 @@
         <thucydides.version>1.8.3</thucydides.version>
         <jelastic.context>gameoflife</jelastic.context>
         <jelastic.environment>wakaleo</jelastic.environment>
+         </property>
+             
     </properties>
 
     <scm>
@@ -177,6 +194,20 @@
     </build>
     <dependencyManagement>
         <dependencies>
+            
+            <dependency>
+               <groupId>net.serenity-bdd</groupId>
+               <artifactId>core</artifactId>
+               <version>${serenity.version}</version>
+          </dependency>
+ 
+          <dependency>
+               <groupId>net.serenity-bdd</groupId>
+               <artifactId>serenity-junit</artifactId>
+               <version>${serenity.version}</version>
+          </dependency>
+            
+            
             <dependency>
                 <groupId>org.easyb</groupId>
                 <artifactId>easyb-core</artifactId>
@@ -240,6 +271,58 @@
                     <!--</plugin>-->
 
                     <!-- PMD -->
+                    
+                     <plugin>
+                     <artifactId>maven-failsafe-plugin</artifactId>
+                     <version>2.18</version>
+                     <configuration>
+                          <includes>
+                              <include>**/features/**/When*.java</include>
+                          </includes>
+                          <systemProperties>
+                                <webdriver.driver>${webdriver.driver}</webdriver.driver>
+                                <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount>
+                                <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount>
+                          </systemProperties>
+                     </configuration>
+                     <executions>
+                          <execution>
+                              <goals>
+                                    <goal>integration-test</goal>
+                                    <goal>verify</goal>
+                             </goals>
+                        </execution>
+                     </executions>
+               </plugin>
+                    
+                    
+                    
+                     <plugin>
+                  <groupId>net.serenity-bdd.maven.plugins</groupId>
+                  <artifactId>serenity-maven-plugin</artifactId>
+                  <version>${serenity.maven.version}</version>
+                     <dependencies>
+                         <dependency>
+                              <groupId>net.serenity-bdd</groupId>
+                              <artifactId>core</artifactId>
+                              <version>${serenity.version}</version>
+                         </dependency>
+                     </dependencies>
+                     <executions>
+                         <execution>
+                            <id>serenity-reports</id>
+                            <phase>post-integration-test</phase>
+                            <goals>
+                                <goal>aggregate</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+          
+                    
+                    
+                    
+                    
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-pmd-plugin</artifactId>
