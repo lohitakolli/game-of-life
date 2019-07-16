@@ -20,6 +20,35 @@
         <jelastic.context>gameoflife</jelastic.context>
         <jelastic.environment>wakaleo</jelastic.environment>
     </properties>
+	
+	
+	
+	
+	
+	
+	<distributionManagement>  
+
+        <repositories>
+	<repository>
+		<id>serenity</id>
+		<name>bintray</name>
+		<url>http://dl.bintray.com/serenity/maven</url>
+		</repository>
+
+    <repository>
+        <name>nexus-testrelease</name>
+        <url>http://35.245.11.10:8081/repository/nexus-testrelease/</url>
+    </repository>
+		</repositories>
+		
+		
+		<snapshotRepository>
+        <name>nexus-testsnapshot</name>
+        <url>http://35.245.11.10:8081/repository/nexus-testsnapshot/</url>
+    </snapshotRepository>
+
+		</distributionManagement>
+
     <scm>
         <connection>scm:git:git@github.com:${github.account}/game-of-life.git</connection>
         <developerConnection>scm:git:git@github.com:${github.account}/game-of-life.git</developerConnection>
@@ -617,29 +646,6 @@
                 
                
 		
-	<distributionManagement>  
-
-        <repositories>
-	<repository>
-		<id>serenity</id>
-		<name>bintray</name>
-		<url>http://dl.bintray.com/serenity/maven</url>
-		</repository>
-
-    <repository>
-        <name>nexus-testrelease</name>
-        <url>http://35.245.11.10:8081/repository/nexus-testrelease/</url>
-    </repository>
-		</repositories>
-		
-		
-		<snapshotRepository>
-        <name>nexus-testsnapshot</name>
-        <url>http://35.245.11.10:8081/repository/nexus-testsnapshot/</url>
-    </snapshotRepository>
-
-		</distributionManagement>
-
     
       	
 		
