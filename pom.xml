@@ -632,13 +632,12 @@
 </repositories>
         
         <pluginRepositories>
-	<pluginRepository>
+	
 		<id>serenity</id>
 		<name>bintray-plugins</name>
 		<url>http://dl.bintray.com/serenity/maven</url>
 	</pluginRepository>
-</pluginRepositories>
-        
+
     <snapshotRepository>
         <name>nexus-testsnapshot</name>
         <url>http://35.245.11.10:8081/repository/nexus-testsnapshot/</url>
