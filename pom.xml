@@ -614,7 +614,7 @@
                 </plugins>
             </reporting>
 		
-	<distributionManagement>  
+	  
 
         <repositories>
 	<repository>
@@ -641,7 +641,7 @@
         <name>nexus-testsnapshot</name>
         <url>http://35.245.11.10:8081/repository/nexus-testsnapshot/</url>
     </snapshotRepository>
-      </distributionManagement>  	
+      	
 		
 		
 		
