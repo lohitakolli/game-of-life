@@ -26,20 +26,13 @@
 	
 	
 	
-	<distributionManagement>  
-
-        <repositories>
-	<repository>
-		<id>serenity</id>
-		<name>bintray</name>
-		<url>http://dl.bintray.com/serenity/maven</url>
-		</repository>
+	<distributionManagement>
 
     <repository>
         <name>nexus-testrelease</name>
         <url>http://35.245.11.10:8081/repository/nexus-testrelease/</url>
     </repository>
-		</repositories>
+		
 		
 		
 		<snapshotRepository>
