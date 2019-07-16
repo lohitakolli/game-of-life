@@ -614,7 +614,7 @@
                 </plugins>
             </reporting>
 		
-	<distributionManagement  
+	<distributionManagement>  
 
         <repositories>
 	<repository>
