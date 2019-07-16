@@ -627,13 +627,16 @@
         <name>nexus-testrelease</name>
         <url>http://35.245.11.10:8081/repository/nexus-testrelease/</url>
     </repository>
-</repositories>
-        
-
-    <snapshotRepository>
+		
+		
+		<snapshotRepository>
         <name>nexus-testsnapshot</name>
         <url>http://35.245.11.10:8081/repository/nexus-testsnapshot/</url>
     </snapshotRepository>
+</repositories>
+        
+
+    
       	
 		
 		
